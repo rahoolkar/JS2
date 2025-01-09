@@ -14,9 +14,9 @@ console.log(typeof a);
 console.log(typeof b);
 console.log(typeof c);
 console.log(typeof d);
-console.log(typeof typeofve);
-console.log( f);
-console.log( g);
+console.log(typeof e);
+console.log(typeof f);
+console.log(typeof g);
 
 //2. non-primitive datatype(pass by reference) :: obj, arr, function
 
@@ -38,3 +38,6 @@ let functionF = function(){
 functionF();
 
 
+console.log(typeof arr);
+console.log(typeof student);
+console.log(typeof functionF);
