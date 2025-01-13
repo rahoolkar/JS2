@@ -42,3 +42,33 @@ let newA2 = array.splice(1,3);
 console.log(newA2);
 console.log("A",array);
 //splice changes the original array
+
+
+//concat and spread operator
+let f = ["a","b","c"];
+let v = ["x","y","z"];
+let all = f.concat(v);
+console.log(all);
+//this will return an new array
+
+let f1 = ["a","b","c"];
+let v1 = ["x","y","z"];
+let all2 = [...f1,...v1];
+let o1 = {...f,...v};
+console.log(all2);
+console.log(o1);
+
+
+//flat
+let another = [1,2,4,4,[34,45,64],[4,45,32,22,[4,5,6,7,8,[754,3,33]]]];
+console.log(another.flat(Infinity))
+
+//Array Object Methods
+console.log(Array.isArray("Rahul"));
+
+console.log(Array.from("Rahul")) //if its unable to conver it into array it will return [] empty arr
+
+let a = 90 ;
+let b = 900;
+let c = 90000;
+console.log(Array.of(a,b,c));
