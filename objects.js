@@ -77,3 +77,14 @@ console.log(regularUser.dateOfJoining?.time?.hours);
 
 //asking the object if it has the mentioned property
 console.log(obj.hasOwnProperty("id"));
+
+//destructring in the objects 
+let {name,age:dob} = dictionary; //we used age:dob so that we can use custom names
+console.log(name);
+console.log(dob);
+
+//how a json object looks like 
+// {
+//     "name":"rahul",
+//     "age":56
+// }
