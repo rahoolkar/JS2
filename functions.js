@@ -43,3 +43,41 @@ function handlingArrays(array){
 }
 
 console.log(handlingArrays([1,2,3,4,5]));
+
+//functions and hoisting 
+
+
+//calling the function
+console.log(addition(23,45));
+//console.log(multiplication(3,3)); //here we will get the error because jab tak line 60 read nahi hoti by javascript tb tak js ko nahi pata that its a function usse pehle its undefined
+
+
+//function statement and declaration
+function addition(num1,num2){
+    return num1+num2;
+}
+
+
+//function expression
+function multiplication(num1,num2){
+    return num1*num2;
+}
+
+
+//understanding scopes
+function outer(){
+    let username = "rahulkar"
+    function inner(){
+        let age = 23;
+        console.log(username);
+        console.log(age);
+        //here the console.log will print the username and age because of lexixal scope
+    }
+
+    console.log(username);
+    //console.log(age)
+    //here username will be printed and age will not be printed bacause of the lexical scoping
+
+    inner();
+}
+outer();
