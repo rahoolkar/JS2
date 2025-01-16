@@ -81,3 +81,15 @@ function outer(){
     inner();
 }
 outer();
+
+
+//arrow functions
+let additionTwo = (a,b)=> (a+b);
+
+let answer = additionTwo(3,4);
+console.log(answer)
+
+//returning object from arrow functions
+let objReturn = ()=> ({username:"udayankar",age:17});
+let getObject = objReturn();
+console.log(getObject);
