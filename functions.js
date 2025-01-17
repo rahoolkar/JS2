@@ -93,3 +93,7 @@ console.log(answer)
 let objReturn = ()=> ({username:"udayankar",age:17});
 let getObject = objReturn();
 console.log(getObject);
+
+//the main diffrence between the function and arrow function is:
+//1. hoisting 
+//2. this keyword
