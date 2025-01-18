@@ -6,7 +6,6 @@ while(counter<=15){
     counter = counter + 2;
 }
 
-
 //do-while loop
 //pehle kaam hoga then condition check hogi
 
