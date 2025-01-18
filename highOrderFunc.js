@@ -32,3 +32,57 @@ data.forEach((data)=>{
     console.log(data);
     console.log(`name in every object is ${data.name} and age is ${data.age}`);
 })
+
+//for-each loop doesnot return anything it makes changes to the original array
+
+let num = [1,2,3,4,5,6,7,8,9,10];
+num.forEach((element)=>{
+            element = element*2;
+})
+
+console.log(num); //array remains as it is after this
+
+//more high order function with array
+
+//filter 
+let newNum = num.filter((element)=>{
+    return (element>=5 && element%2==0);
+})
+console.log(newNum);
+
+//map 
+let number1 = [1,2,4,5,6,7,8];
+let new2 = number1.map((element)=>{
+    return element+2;
+})
+console.log(new2);
+
+//chaining methods
+let new3 = number1.map((element)=>{
+    return element+3;
+}).map((element)=>{
+    return element+5;
+})
+
+console.log(new3);
+
+//reduce method
+let reducedValue = [1,2,3].reduce((result,element)=>{ //here result will start from value 0
+    return result+element;
+})
+console.log(reducedValue);
+
+let reducedValue2 = [1,2,3].reduce(function(result,element){
+    console.log(`result value = ${result} and element value is ${element}`)
+    return result+element;
+},5)
+console.log(reducedValue2);
+//here the value of result will start from 5 and it will go on like this
+
+//use case for reduce method 
+let shopping = [{name:"js",price:2999},{name:"java",price:3450},{name:"react",price:6000}];
+let priceCal = shopping.reduce((result,element)=>{
+    console.log(element.price);
+    return result+element.price;
+},199);
+console.log(priceCal);
