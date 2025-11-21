@@ -24,3 +24,9 @@ console.log(typeof age);
 console.log(typeof x); //object
 console.log(typeof undefined); //undefined
 
+//Symbol 
+
+const id = Symbol("124");
+const anotherId = Symbol("124"); //they will return a unique id
+console.log(id);
+console.log(anotherId);
