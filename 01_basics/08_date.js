@@ -13,3 +13,7 @@ console.log(myCreatedDate.toString());
 console.log(myCreatedDate.toDateString());
 console.log(myCreatedDate.toLocaleString());
 console.log(myCreatedDate.toLocaleDateString());
+
+const newDate = new Date();
+
+console.log(newDate.getDay());
