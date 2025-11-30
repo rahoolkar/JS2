@@ -4,7 +4,7 @@
 
 //it allows us to store multiple values of different datatypes under a single variable name
 
-//aarays in javascript is resizable and if we copy an array to another array then we get the reference of it.
+//arrays in javascript is resizable and if we copy an array to another array then we get the reference of it.
 
 let myArray = [10, "rahul", true, "udayan", 23];
 
