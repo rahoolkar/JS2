@@ -21,4 +21,22 @@ console.log("Outer", b);
 console.log("Outer", c);
 
 //value of varible defined by var changes because it is defined in the global scope. This is main problem with using the var.
-//outer varibles should be accessed in the inner scope but inner variables should not be accessed in the outer scope. 
+//outer varibles should be accessed in the inner scope but inner variables should not be accessed in the outer scope.
+
+//closure in javascript
+
+function outer() {
+  const a = 90;
+  function inner() {
+    // const a = 100;
+    console.log(a);
+  }
+  console.log(a);
+  inner();
+}
+
+console.log(a); 
+
+outer();
+
+//perfect closure example
