@@ -28,9 +28,43 @@ console.log(result);
 
 //giving default parameter in function
 
-function printMyName(name = "rahul"){
-    console.log(name);
+function printMyName(name = "rahul") {
+  if (name === undefined) {
+    console.log("please enter some name");
+    return;
+  }
+  console.log(name);
 }
 
-printMyName(udayankar);
+printMyName("udayankar");
 printMyName(); //undefined if we donot pass any arguement
+
+//rest operator
+
+function calculateItems(...items) {
+  //rest operator - take all the different elements toegther and bind it in an array
+  console.log(items); // items now an array
+}
+
+calculateItems(10, 20, 30, 40);
+
+calculateItems(100, 200, 300, 400, 500);
+
+//working with objects
+
+function handleObject(obj) {
+  console.log(`${obj.name} is my name and my age is ${obj.age}`);
+}
+
+handleObject({
+  name: "udayan kar",
+  age: 19,
+});
+
+//working with arrays
+
+function handleArrays(nums) {
+  console.log(nums[2]);
+}
+
+handleArrays([1,2,3,4]);
