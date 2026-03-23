@@ -1,22 +1,26 @@
-const score = "233abc";
+//conversions to number
 
-console.log(typeof score);
+let score = "33";
+let convertedScore = Number(score);
+console.log(convertedScore); //33
+console.log(typeof convertedScore); //number
 
-const stringToNumber = Number(score); //type conversion
+let string = "33abc";
+let convertedString = Number(string);
+console.log(convertedString); //NaN - JS was not able to convert it into number datatype so it throw a "not a number" but its type is number
+console.log(typeof convertedString); //number
 
-console.log(typeof stringToNumber);
-console.log(stringToNumber);
+let nullValue = null;
+let convertedNullValue = Number(nullValue);
+console.log(convertedNullValue); //empty or intentional empty place is considered to be 0
+console.log(typeof convertedNullValue); //number
 
-// point to remember -> NAN is not a number which comes when javascript fails to convert the string number into number, but iska type number hota hai
+let age = undefined;
+let convertedAge = Number(age);
+console.log(convertedAge); //NaN - since undefined can have any value in the future so it is NaN
+console.log(typeof convertedAge); //number
 
-const x = null;
-
-const covertedX = Number(x); // null -> 0 //undefined -> NAN //true -> 1 //false -> 0 // "" -> 0(false) // "hello" -> 1(true)
-
-console.log(typeof covertedX);
-console.log(covertedX);
-
-const someNumber = 90;
-const stringNumber = String(someNumber);
-console.log(stringNumber);
-console.log(typeof stringNumber);
+let emptyString = "";
+let convertedEmptyString = Number(emptyString);
+console.log(convertedEmptyString); // 0 - intentional empty space is always a zero
+console.log(typeof convertedEmptyString); //number

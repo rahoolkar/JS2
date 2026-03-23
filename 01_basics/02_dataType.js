@@ -1,7 +1,7 @@
 "use strict" //treat all Js code as newer version
 
 let age = 90 ;
-let x = null;
+let x = null; //null is a datatype and also a standalone value
 
 //datatypes in javascript
 
@@ -21,7 +21,7 @@ let x = null;
 
 console.log(typeof "rahulkar");
 console.log(typeof age);
-console.log(typeof x); //object
+console.log(typeof null); //object
 console.log(typeof undefined); //undefined
 
 //Symbol 
