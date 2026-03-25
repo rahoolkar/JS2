@@ -22,3 +22,5 @@ console.log(undefined <= 0); //false
 console.log(undefined == 0); //false
 
 console.log("2" === 2) ; //false 
+
+// in js comparisons operator and the equity operator works diffrently
