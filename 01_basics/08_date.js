@@ -1,19 +1,26 @@
-const mydate = new Date();
+let mydih = new Date();
 
-console.log(typeof mydate); // -> object
-console.log(mydate.toString());
-console.log(mydate.toDateString());
-console.log(mydate.toLocaleString());
+console.log(mydih);
+console.log(typeof mydih); //returns type as object
 
-const myCreatedDate = new Date(2025,0,30);
-const myCreatedDateWithTime = new Date(2025,0,30,1,12);
+console.log(mydih.toString());
+console.log(mydih.toLocaleDateString());
+console.log(mydih.toLocaleString());
+console.log(mydih.getMilliseconds());
+console.log(mydih.getMinutes());
 
-console.log(myCreatedDate);
-console.log(myCreatedDate.toString());
-console.log(myCreatedDate.toDateString());
-console.log(myCreatedDate.toLocaleString());
-console.log(myCreatedDate.toLocaleDateString());
+//defining my own date
 
-const newDate = new Date();
+let mycreatedDate = new Date(2002, 0, 30, 13, 12);
+console.log(mycreatedDate.toLocaleString());
 
-console.log(newDate.getDay());
+//to get milliseconds
+
+let milli = Date.now();
+console.log(milli);
+
+//methods with date object
+let newDate = new Date();
+
+console.log(newDate.getMonth()+1);
+console.log(newDate.getDay()+1); //0 based indexing
