@@ -1,28 +1,37 @@
-//Primitive dataType uses stack memory for storing the value. 
-//Non Primitive DataType uses heap memory for storing the value.
+//there is 2 type of memory in javascript - heap memory and stack memory
 
-let number1 = 90 ;
-let number2 = number1 ; 
-console.log(number2);
-number2 = 1000; 
-console.log(number1);
-console.log(number2); 
+//stack memory is used by primitive data types - number, string, boolean..
+//heap memory is used by non-primitive datatypes - objects, functions, arrays.
 
-//In the stack memory we only get the copy of the value and not the original reference. 
+let a = 90;
+let b = a;
+console.log(b, "before changing the value of b");
 
-let o1 = {
-    name : "Rahul",
-    age : 23
-}
+b = 100;
+console.log(b, "after changing thevalue of b");
 
-let o2 = o1;
+//pass by value - when we did b = a; the value of a was copied to the varibale b not the reference was passed
+//later, when we did b = 100; the value of b was changed by 100 and nothig was affected in the value of a
 
-console.log(o2) ; //Now, o1 and o2 are refering to the same object in the memory 
+//but in case of heap memory which is pass by reference
 
-o2.email = "rahul@google.com";
+let a1 = [12,24,36,48];
+let a2 = a1;
+console.log(a1, "value of a1");
+console.log(a2, "before changing te value of a2");
 
-console.log(o2);
-console.log(o1);
+a2.push(1000);
+console.log(a1, "value of a1");
+console.log(a2, "after changing te value of a2");
 
-//Since, they were refering to the same object in the memory so the changes dont in the another object will e reflected to the another object
+//note - changing the whole array will work differently and will not affect the value of the variable
+//for example: 
 
+let a3 = [2,4,6,8,10];
+let a4 = a3;
+
+console.log(a4, "value of a4 before changing"); // now we will get both the value of the a3,a4 same
+
+a4= [1,2,3,4,5]; //here, we are assigning the value of the a4 to a new array meaning there will be a seperate memory created for the new array
+
+console.log(a4, "after changing the value of a4"); // we will get the value of the new array instead of the old array
