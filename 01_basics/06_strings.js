@@ -1,29 +1,56 @@
-const name = "rahul"; //this creates a primitive string //lightweight //stores directly into the memory
+//string are collections of characters in js
 
-const fullName = new String("rahulkar"); //calling the String object //heavy //rarely used
+//strings can be wriiten in single quotes and double quotos in js
 
-const url = "https://www.google.com/rahul-kar/";
+//strings are immutable in natire because of performance optimizatiion
 
-console.log(
-  `hi i am ${name.toLowerCase()}, and my full name is ${fullName.toUpperCase()}`
-); //using backticks
+//declaring strings in javascript
 
-console.log(name.toUpperCase());
+//normal method
 
-console.log(name.__proto__);
+let name = "rahul";
 
-console.log(fullName.__proto__);
+//accessing the value of string
+
+console.log(name[0]);
+
+//using String object
+
+let surname = new String("kar");
+
+console.log(typeof name); //returns type string
+console.log(typeof surname); //returns type of object
+
+//template literals
+
+let msg = `hello, namaste, ${name} ${surname}. good morning`;
+
+console.log(msg);
+
+let str = "hello world";
+str = str.toUpperCase();
+console.log(str);
+
+//first str was pointing to "hello world" in the memory and after we performed a method on it and a "hello world" stays te same and "HELLO WORLD" was created in the momory and now str is pointing to it.
+
+console.log(str.__proto__); //this is the object that contains all the methods that we can apply on string
+
+//methods with strings
+
+let fullName = "rahulkar";
 
 console.log(fullName.length);
+console.log(fullName.toUpperCase());
+console.log(fullName.toLowerCase());
+console.log(fullName.charAt(0));
+console.log(fullName.indexOf("r"));
 
-console.log(fullName[0]);
+console.log(fullName.substring(0,4));
+console.log(fullName.slice(-7,-4)); //only difference between slice and substring is that slice method accepts negative values as start and end
 
-console.log(name.charAt(1));
+console.log(fullName.trim()); //removes the spaces from start and end of the string
 
-console.log(fullName.indexOf("h"));
+let url = "https://www.apna%20hostel.com";
+console.log(url.replace("%20", "--"));
 
-console.log(url.includes("udayan"));
-
-console.log(url.replace("google","yahoo"))
-
-//Strings are immutable in nature in javascript, means whenever we perform any methods on string it makes copy of the string first and then performs the action on the copy.
+console.log(fullName.includes("kar"));
