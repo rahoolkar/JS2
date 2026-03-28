@@ -1,78 +1,104 @@
-//arrays in javascript
+//arrays in javscript
 
-//array is an object data type
+//defining arrays using array literals
 
-//it allows us to store multiple values of different datatypes under a single variable name
+let a1 = [1, 2, 3, 4, 5];
 
-//arrays in javascript is resizable and if we copy an array to another array then we get the reference of it.
+//defining arrays using array constructor
 
-let myArray = [10, "rahul", true, "udayan", 23];
+let a2 = new Array(10, 20, 30, 40, 50);
 
-console.log(myArray.length);
+//there is no big difference if we do this but defining arrays using array literals is the recommended way
 
-console.log(myArray[1]);
+//arrays are resizable
 
-//Arrays methods
+//arrays can contain value of many different data type
 
-console.log(myArray);
+//arrays are objects in js and when we copy arrrays then we are sharing the same reference point in the storage
 
-myArray.push(90);
-myArray.push(70);
+//accesing value of the array
 
-console.log(myArray);
+console.log(a1[0]);
 
-myArray.pop();
-myArray.unshift(100);
+console.log(a1.length);
 
-console.log(myArray);
+//methods in arrays
 
-myArray.shift();
+a1.push(100);
+a1.push(200);
+console.log(a1);
 
-console.log(myArray);
+a1.pop();
+console.log(a1);
 
-console.log(myArray.includes(88));
-console.log(myArray.indexOf(88));
+a1.unshift(10000);
+a1.unshift(1000);
+console.log(a1);
 
-console.log(myArray.join("-")); //return type string
+a1.shift();
+console.log(a1);
+
+console.log(a1.includes(10000)); //true and false
+
+console.log(a1.indexOf(4));
+
+console.log(a1.join("-")); //returns a string
 
 //slice and splice
 
-const array = [1, 2, 3, 4, 5, 6, 7, 8];
+let og = [1, 2, 3, 4, 5, 6, 7];
 
-const slicedArray = array.slice(1, 3);
-console.log("original array -> ", array);
-console.log("sliced array -> ", slicedArray);
+//using slice
 
-const splicedArray = array.splice(1, 3);
-console.log("original array -> ", array);
-console.log("spliced array -> ", splicedArray);
+let o1 = og.slice(1, 4);
 
-//the start (inclusive) and end(exclusive) in the slice method
-//the start (inclusive) and end(inclusive) in the splice method
+console.log("after using slice", o1);
+console.log("original array", og);
 
-//slice creates an another array and give the portion of the array and it doesnot make changes to the original array
-//splice method makes changes to the original array taking out the elements we mentioned in the method
+let o2 = og.splice(1, 4);
 
-//More methods
+console.log("after using splice", o2);
+console.log("original array", og);
 
-const fruits = ["oranges", "mangoes", "apple", "grape"];
-const veggies = ["potato", "eggplant", "bellpeper", "tomato"];
+//when we use splice method it actually modifies the array and the start and end are both inclusive and it returns the deleted elements in an array
+//when we use slice methods it doesnot changes the array and start is inclusive and end is exclusive and it returns the elements in an array
 
-console.log(fruits.push(veggies));
+let fruits = ["apple", "banana", "grapes"];
+let veggies = ["potato", "tomatos", "spinach"];
 
-const allThingsArray = fruits.concat(veggies); //returns a new array
+console.log(fruits.concat(veggies)); //concat method returns a new array and it takes two different arrays and combine it together
 
-console.log(allThingsArray);
+let difficult_array = [12, [3, 4], 7, [8, 9, 10, [11, 12, 13, [45]]]];
 
-console.log([...fruits, ...veggies]);
+console.log(difficult_array.flat(Infinity));
 
-//Array Object Methods
+console.log(a1.reverse());
 
-console.log(Array.isArray("rahulkar"));
-console.log(Array.from("rahulkar")); //returns empty array if it cant convert the aaray
+console.log(a1.sort(compare));
 
-const a = 90;
-const b = 19;
-const c = 100;
+function compare(a, b) {
+  return a - b;
+}
 
-console.log(Array.of(a, b, c));
+//array object methods
+
+console.log(Array.from("rahul")); //this methods takes input and try to convert it into array if not possible then it returns an empty array
+
+console.log(Array.isArray("rahul")); //returns true or false
+
+let s1 = 10;
+let s2 = 20;
+let s3 = 30;
+console.log(Array.of(s1, s2, s3));
+
+a1.forEach((e) => {
+  console.log(e);
+});
+
+for (let e of a1) {
+  console.log(e); //upar upar se
+}
+
+for(let e in a1){
+    console.log(a1[e]); //in-deep dive
+}
