@@ -1,26 +1,40 @@
-let mydih = new Date();
+//learning about date object
 
-console.log(mydih);
-console.log(typeof mydih); //returns type as object
+let dih = new Date(); //creating a date object //this will give me milliseconds from 1 jan 1970
 
-console.log(mydih.toString());
-console.log(mydih.toLocaleDateString());
-console.log(mydih.toLocaleString());
-console.log(mydih.getMilliseconds());
-console.log(mydih.getMinutes());
+let stringDih = new Date("2002-01-30"); //creating a date object from a string
 
-//defining my own date
+let classDih = new Date(2024,0,30); //creating a date object from class
 
-let mycreatedDate = new Date(2002, 0, 30, 13, 12);
-console.log(mycreatedDate.toLocaleString());
+//using methods with date object
 
-//to get milliseconds
+console.log(dih.toString()); //to see date in a readable form
 
-let milli = Date.now();
-console.log(milli);
+console.log(dih.toLocaleString()); //date with time
 
-//methods with date object
-let newDate = new Date();
+console.log(dih.toDateString()); //date only string
 
-console.log(newDate.getMonth()+1);
-console.log(newDate.getDay()+1); //0 based indexing
+console.log(dih.toLocaleTimeString()) //time string
+
+console.log(dih.toLocaleDateString("en-IN")); //date string
+
+// methods to get the time parts
+
+console.log(dih.getHours());
+
+console.log(dih.getMinutes());
+
+console.log(dih.getSeconds());
+
+console.log(dih.getMilliseconds());
+
+//methods to get the date parts 
+
+console.log(dih.getFullYear()); //2026
+
+console.log(dih.getMonth()); //2 [zero based]
+
+console.log(dih.getDay()); //day of the month
+
+console.log(dih.getDay()); // (0-6)
+
