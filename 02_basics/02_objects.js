@@ -1,31 +1,54 @@
-//singleton object
+//objects in javascript is a collection of key value pairs
 
-//when we create an object with constructor we have a singleton object
+//defining an object using object
 
-//defining symbol in the object
+let s = Symbol("id");
 
-let mySymbol = Symbol("mysym");
-
-//object literals
-
-let jsUser = {
-  name: "rahulkar",
-  [mySymbol]: 10001,
-  age: 90,
-  state: "haryana",
+let o1 = {
+  name: "rahul",
+  age: 89,
   city: "rohtak",
-  email: "rahul@google.com",
+  [s]: 123,
 };
 
-//defining a function in the object
-jsUser.greeting = function () {
-  console.log(`hello namaste ${this["name"]}`);
-};
+o1[s] = 9000;
+//defining an object using object class
 
-//accessing the objects
+let o2 = new Object();
+o2.name = "udayan";
+o2.age = 90;
+o2.city = "panipat";
 
-console.log(jsUser.email);
-console.log(jsUser["name"]);
-console.log(jsUser[mySymbol]);
-console.log(jsUser.greeting);
-console.log(jsUser.greeting());
+o2.score = 989; //adding a new key value to the object
+
+delete o1.name //deleting a key value pair from the object
+
+console.log(o1);
+console.log(o2);
+
+//accessing the values of the object
+
+console.log(o2.name); //using dot
+
+console.log(o1["name"]); //using brackets
+
+console.log(o1[s]); //accessing the symbol
+
+//changing the values in the object
+
+o2.city = "kolkata";
+
+console.log("after changing the object", o2);
+
+o1.name = "rahul kar"
+//defining a function in the object 
+
+o1.greetings = function(){
+  console.log(`hello. ${this.name}`);
+}
+
+// console.log(o1.greetings);
+console.log(o1.greetings());
+ 
+
+
