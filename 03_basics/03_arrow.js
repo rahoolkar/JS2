@@ -8,7 +8,7 @@ const user = {
   },
 };
 
-//in object (this) keyword points to
+//in function (this) keyword points to the object
 
 user.welcomeText();
 
