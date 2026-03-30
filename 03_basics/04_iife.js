@@ -1,15 +1,17 @@
 //Immediately Invoked Function Expression
 
-//()()
+//()();
 
 (function () {
-  console.log("iife one working");
-})();
+  console.log("hello world from iife");
+})(); // <- ending me ; is very important for iife to understand where the line is ending
 
-((name) => {
-  console.log("hello ", name);
-})("udayankar");
+((a, b) => {
+  console.log(a + b);
+})(2, 3);
 
-(function bed() {
-  console.log("named iife working");
+//Named IIFE
+
+(function chai() {
+  console.log("i love chai");
 })();
