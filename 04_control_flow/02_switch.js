@@ -1,17 +1,20 @@
 //switch statement in javascript
 
-const month = 3;
+const fruit = "Mango";
 
-switch (month) {
-  case 1:
-    console.log("January");
+switch (fruit) {
+  case "Apple":
+    console.log("apple is the answer");
     break;
-    
-  case 2:
-    console.log("February");
+
+  case "Orange":
+    console.log("Orange is the fruit");
+    break;
+
+  case "Mango":
+    console.log("Mongo is the fruit");
     break;
 
   default:
-    console.log("this is the default case");
-    break;
+    console.log("default statement");
 }
