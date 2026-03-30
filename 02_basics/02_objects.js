@@ -69,10 +69,38 @@ console.log(Object.keys(target));
 console.log(Object.values(target));
 console.log(target.hasOwnProperty("a")); //checks if the given parameter exists or not as a key
 
+//destructuring of an object
 
-//methods of object 
+let object1 = {
+  name: "rahul",
+  age: 89,
+  score: 9000,
+  city: "rohtak",
+  isLoggedIn: true,
+};
+
+console.log("object before destructing", object1.name); //accessing the values
+
+const { name: username, age, city } = object1;
+
+console.log(username);
+console.log(age);
+console.log(city);
+
+//methods of object
 
 //1. Object.freeze() -> locks the object and will not allow any changes to the object
 //2. Object.assign({},o1,o2,o3) -> merges the object to the passed as a para meter to the target object
 //3. Object.keys() -> returns an array with all the keys of the object
 //4. Object.values() -> returns an array with all the values of the object
+//5. Object.entries() -> returns an array which contains key values in form of array
+
+
+//how a json looks like
+
+// {
+//   "name" : "rahul",
+//   "age" : 56,
+//   "city" : "rohtak",
+//   "score" : 78899
+// }

@@ -2,8 +2,11 @@
 
 //defining a function
 function sayMyName() {
-  console.log("rahul kar");
+  console.log("my name is rahul kar");
 }
+
+//refering the fucntion
+console.log(sayMyName);
 
 //calling a function
 sayMyName();
@@ -29,7 +32,8 @@ console.log(result);
 //giving default parameter in function
 
 function printMyName(name = "rahul") {
-  if (name === undefined) {
+  if (!name) {
+    //if name doesnot exists
     console.log("please enter some name");
     return;
   }
@@ -52,19 +56,32 @@ calculateItems(100, 200, 300, 400, 500);
 
 //working with objects
 
-function handleObject(obj) {
-  console.log(`${obj.name} is my name and my age is ${obj.age}`);
+function handleObject(anyobject) {
+  console.log(
+    `hi, my name is ${anyobject.username} and my age is ${anyobject.age}`
+  );
 }
 
+const o1 = {
+  username: "rahul kar",
+  age: 90,
+};
+
+handleObject(o1);
+
 handleObject({
-  name: "udayan kar",
-  age: 19,
+  username: "udayan kar",
+  age: 78,
 });
 
 //working with arrays
+
+const arr = [10,20,30,40,50];
 
 function handleArrays(nums) {
   console.log(nums[2]);
 }
 
-handleArrays([1,2,3,4]);
+handleArrays(arr);
+
+handleArrays([1, 2, 3, 4]);
