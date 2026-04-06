@@ -1,9 +1,9 @@
-function x(){
-    var a = 90 ;
-    function y(){
-        console.log(a);
-    }
-    y();
+function x() {
+  var a = 90;
+  function y() {
+    console.log(a);
+  }
+  y();
 }
 
 x();
@@ -16,15 +16,14 @@ x();
 
 //now
 
-function a(){
-    var x = 9000; 
+function a() {
+  var x = 9000;
 
-    function b(){
-        console.log(x);
-    }
-    return b;
+  function b() {
+    console.log(x);
+  }
+  return b;
 }
-
 
 var ans = a();
 console.log(ans); // ans contains the function b
@@ -34,3 +33,17 @@ console.log(ans); // ans contains the function b
 ans();
 
 //when we return a function in javascript not only the function code is returned but also the closure of that function is returned (function binded with its lexical scope)
+
+function x() {
+  for (var i = 1; i <= 5; i++) {
+    function close(val){
+        setTimeout(function(){
+            console.log(val);
+        },val * 1000);
+    }
+    close(i);
+  }
+  console.log("namaste javascript");
+}
+
+x();
