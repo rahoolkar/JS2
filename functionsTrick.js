@@ -31,11 +31,19 @@
 
 //q3
 
-var x = 1 ;
+// var x = 1 ;
+
+// if(true){
+//     var x = 10;
+//     console.log(x);
+// }
+
+// console.log(x);
+
+let x = 10 ; 
 
 if(true){
-    var x = 10;
-    console.log(x);
+    let x = 100;
 }
 
 console.log(x);
