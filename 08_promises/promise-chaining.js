@@ -1,4 +1,5 @@
 let p = new Promise(function (resolve, reject) {
+  console.log("p")
   setTimeout(() => {
     resolve(200);
   }, 2000);
@@ -8,6 +9,7 @@ p.then(function (value) {
   console.log("first then callback");
   console.log(value);
   let p2 = new Promise(function (resolve, reject) {
+    console.log("p2")
     setTimeout(() => {
       resolve(400);
     }, 2000);
@@ -28,3 +30,5 @@ p.then(function (value) {
   .catch((error) => {
     console.log(error);
   });
+
+console.log("end");
