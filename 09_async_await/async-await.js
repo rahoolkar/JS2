@@ -1,4 +1,4 @@
-async function fetching() {
+async function mainF() {
   let p1 = new Promise(function (resolve, reject) {
     setTimeout(function () {
       resolve(200);
@@ -7,7 +7,7 @@ async function fetching() {
 
   let p2 = new Promise(function (resolve, reject) {
     setTimeout(function () {
-      reject(300);
+      resolve(300);
     }, 5000);
   });
 
@@ -17,10 +17,12 @@ async function fetching() {
   return [p11, p22];
 }
 
-fetching()
-  .then(function (value) {
-    console.log(value);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// mainF()
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+console.log(mainF());
